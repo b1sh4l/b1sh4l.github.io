@@ -1214,6 +1214,20 @@
     .avatar-box { border-radius: 30px; }
   
     .avatar-box img { width: 120px; }
+
+    .cropped-image-container {
+      width: 150px; 
+      height: 150px;
+      overflow: hidden; 
+      border-radius: 10px; 
+  }
+  
+  .cropped-image {
+      width: 100%; 
+      height: auto;
+      
+  }
+  
   
     .info-content .name { margin-bottom: 15px; }
   
