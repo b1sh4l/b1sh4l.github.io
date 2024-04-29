@@ -117,3 +117,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+window.addEventListener('load', function() {
+  document.body.classList.add('fade-in');
+});
