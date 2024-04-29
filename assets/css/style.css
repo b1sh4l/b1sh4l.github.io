@@ -337,7 +337,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 460px;
 }
 
 .sidebar-info {
@@ -1256,6 +1256,13 @@ textarea.form-input::-webkit-resizer {
    */
 
 @media (min-width: 450px) {
+  .sidebar,
+  article {
+    width: 100%;
+
+  }
+
+
   /**
      * #PORTFOLIO 
      */
@@ -1343,25 +1350,7 @@ textarea.form-input::-webkit-resizer {
     gap: 25px;
   }
 
-  .avatar-box {
-    border-radius: 30px;
-  }
 
-  .avatar-box img {
-    width: 120px;
-  }
-
-  .cropped-image-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  .cropped-image {
-    width: 100%;
-    height: auto;
-  }
 
   .info-content .name {
     margin-bottom: 15px;
@@ -1518,6 +1507,7 @@ textarea.form-input::-webkit-resizer {
     flex-grow: 1;
     width: 35px;
   }
+  
 
   /**
      * #RESUME
@@ -1865,9 +1855,7 @@ textarea.form-input::-webkit-resizer {
     flex-direction: column;
   }
 
-  .avatar-box img {
-    width: 150px;
-  }
+
 
   .info-content .name {
     white-space: nowrap;
@@ -1928,6 +1916,8 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
+
+
 /** Animation */
 
 @keyframes fadeIn {
@@ -1936,5 +1926,34 @@ textarea.form-input::-webkit-resizer {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.avatar-box {
+  border-radius: 30px;
+}
+
+
+.cropped-image-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.cropped-image {
+  width: 100%;
+  height: auto;
+}
+/* Apply responsive styles for different screen sizes */
+@media (max-width: 768px) {
+  .avatar-box {
+    border-radius: 20px;
+  }
+
+  .cropped-image-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
   }
 }
