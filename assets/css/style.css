@@ -1941,8 +1941,14 @@ textarea.form-input::-webkit-resizer {
 .cropped-image {
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease-in;
 }
-/* Apply responsive styles for different screen sizes */
+
+.cropped-image:hover {
+  transform: scale(1.05);
+}
+
+
 @media (max-width: 768px) {
   .avatar-box {
     border-radius: 20px;
