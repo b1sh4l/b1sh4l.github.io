@@ -918,7 +918,7 @@ main {
   transition: var(--transition-1);
 }
 .project-category {
-  color: var(--light-gray-70);
+  color: var(--light-gray);
   font-weight: var(--fw-300);
 }
 .mapbox {
