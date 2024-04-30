@@ -2,16 +2,26 @@
 const toggleButton = document.getElementById("theme-toggle"),
   body = document.body;
 toggleButton.addEventListener("click", () => {
-  body.classList.toggle("darkmode"), body.classList.toggle("lightmode");
+  body.classList.toggle("darkmode");
+  body.classList.toggle("lightmode");
+
+  const cat = document.getElementById("cat");
+  if (body.classList.contains("lightmode")) {
+    cat.style.display = "none";
+  } else {
+    cat.style.display = ""; 
+  }
 });
+
 const themeToggle = document.getElementById("theme-toggle"),
   moonIcon = document.getElementById("moon-icon");
 themeToggle.addEventListener("click", () => {
   "moon" === moonIcon.getAttribute("name")
     ? moonIcon.setAttribute("name", "sunny")
-    : moonIcon.setAttribute("name", "moon"),
-    moonIcon.classList.toggle("rotate-icon");
+    : moonIcon.setAttribute("name", "moon");
+  moonIcon.classList.toggle("rotate-icon");
 });
+
 const elementToggleFunc = function (e) {
     e.classList.toggle("active");
   },
