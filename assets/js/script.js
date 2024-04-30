@@ -2,6 +2,31 @@
 
 
 
+const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  toggleButton.addEventListener('click', () => {
+
+    body.classList.toggle('darkmode'); // Toggle darkmode class
+    body.classList.toggle('lightmode'); // Toggle lightmode class
+  });
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const moonIcon = document.getElementById('moon-icon');
+
+  themeToggle.addEventListener('click', () => {
+      // Toggle between 'moon' and 'sunny' icons
+      if (moonIcon.getAttribute('name') === 'moon') {
+          moonIcon.setAttribute('name', 'sunny');
+      } else {
+          moonIcon.setAttribute('name', 'moon');
+      }
+
+      // Add or remove the class to rotate the icon
+      moonIcon.classList.toggle('rotate-icon');
+  });
+
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 

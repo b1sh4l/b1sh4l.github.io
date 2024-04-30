@@ -48,7 +48,9 @@
   );
 
   /* solid */
-
+  --circle-color: hsl(0, 2%, 71%);
+  --navbar-background: hsla(240, 1%, 17%, 0.75);
+  --logo-color: hsl(0, 0%, 84%);
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
@@ -168,6 +170,106 @@ body {
 /*-----------------------------------*\
     #REUSED STYLE
   \*-----------------------------------*/
+
+.darkmode {
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(240, 1%, 25%) 3%,
+    hsl(0, 0%, 19%) 97%
+  );
+  
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(45, 100%, 71%) 0%,
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      hsla(45, 100%, 71%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%
+    ),
+    hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(45, 100%, 72%),
+    hsl(35, 100%, 68%)
+  );
+
+  --circle-color: hsl(0, 2%, 71%);
+  --navbar-background: hsla(240, 1%, 17%, 0.75);
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --logo-color: hsl(0, 0%, 84%);
+}
+
+.lightmode {
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(240, 1%, 85%) 3%,
+    hsl(0, 0%, 91%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 82%, 0.251) 0%,
+      hsla(240, 2%, 89%, 0) 100%
+    ),
+    hsl(240, 2%, 87%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(45, 100%, 29%) 0%,
+    hsla(36, 100%, 31%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      hsla(45, 100%, 29%, 0.251) 0%,
+      hsla(35, 100%, 32%, 0) 59.86%
+    ),
+    hsl(240, 2%, 87%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 75%) 0%,
+    hsla(0, 0%, 75%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(45, 100%, 28%),
+    hsl(35, 100%, 32%)
+  );
+
+  --circle-color: hsl(0, 0%, 22%);
+  --navbar-background: hsla(0, 0%, 100%, 0.75);
+  --jet: hsl(0, 0%, 78%);
+  --onyx: hsl(240, 1%, 83%);
+  --eerie-black-1: hsl(240, 2%, 87%);
+  --eerie-black-2: hsl(240, 2%, 88%);
+  --smoky-black: hsl(0, 0%, 93%);
+  --white-1: hsl(0, 0%, 0%);
+  --white-2: hsl(0, 0%, 2%);
+  --orange-yellow-crayola: hsl(45, 100%, 28%);
+  --vegas-gold: hsl(45, 54%, 42%);
+  --light-gray: hsl(0, 0%, 16%);
+  --logo-color: hsl(0, 0%, 16%);
+}
+
 
 .sidebar,
 article {
@@ -436,7 +538,7 @@ main {
 }
 
 .contact-title {
-  color: var(--light-gray-70);
+  color: var(--light-gray);
   font-size: var(--fs-8);
   text-transform: uppercase;
   margin-bottom: 2px;
@@ -460,13 +562,22 @@ main {
   padding-left: 7px;
 }
 
-.social-item .social-link {
-  color: var(--light-gray-70);
-  font-size: 18px;
+#moon-icon {
+  color: var(--logo-color);
+  font-size: 20px; 
+  box-shadow: var(--shadow-3);
 }
 
+
+.social-item .social-link {
+  color: var(--logo-color);
+  font-size: 18px;
+  transition: transform 0.3s ease-in;
+}
+
+
 .social-item .social-link:hover {
-  color: var(--light-gray);
+  transform: scale(1.7);
 }
 
 /*-----------------------------------*\
@@ -478,7 +589,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-background); 
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -1258,7 +1369,7 @@ textarea.form-input::-webkit-resizer {
     width: 100%;
 
   }
-
+  
 
   /**
      * #PORTFOLIO 
@@ -1400,6 +1511,7 @@ textarea.form-input::-webkit-resizer {
   .navbar-link {
     --fs-8: 14px;
   }
+
 
   /**
      * #ABOUT
@@ -1959,4 +2071,26 @@ textarea.form-input::-webkit-resizer {
     height: 80px;
     border-radius: 5px;
   }
+
+}
+
+
+.navbar-link ion-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+}
+
+.icon-circle {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 20%; /* Makes it circular */
+  background-color: var(--circle-color); /* Set your desired circle color */
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
