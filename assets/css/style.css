@@ -1650,9 +1650,7 @@ textarea.form-input::-webkit-resizer {
     height: 80px;
     border-radius: 5px;
   }
-  #speech-bubble {
-    display: none;
-  }
+
 }
 .navbar-link ion-icon {
   transition: transform 0.3s;
@@ -1669,4 +1667,13 @@ textarea.form-input::-webkit-resizer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1280px) {
+  #speech-bubble {
+    display: none;
+  }
+  #cat {
+    display: none;
+  }
 }
