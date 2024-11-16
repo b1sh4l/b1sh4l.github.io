@@ -1677,3 +1677,7 @@ textarea.form-input::-webkit-resizer {
     display: none;
   }
 }
+
+a {
+  color: var(--light-gray);
+}
