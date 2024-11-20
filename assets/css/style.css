@@ -1650,7 +1650,6 @@ textarea.form-input::-webkit-resizer {
     height: 80px;
     border-radius: 5px;
   }
-
 }
 .navbar-link ion-icon {
   transition: transform 0.3s;
